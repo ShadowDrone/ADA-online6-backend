@@ -12,7 +12,7 @@ public class Ejercicio01 {
 
         int a, b;
 
-        System.out.println("Ingresar dos numeros enteros.");
+        System.out.println("Ingresar dos números enteros.");
         a = Entrada.nextInt();
         System.out.println("Ingrese el siguiente");
         b = Entrada.nextInt();
