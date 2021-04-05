@@ -10,20 +10,17 @@ public class App {
 
         miMetflix.inicializarCatalogo();//Estoy llamando al metodo que crea las pelis y series.
 
-        Serie serieBuscada = miMetflix.buscarSerie("how I met your mother");
+        Serie serieBuscada = miMetflix.buscarSerie("How I met your mother");
 
-        if (serieBuscada == null)
-        {
+        if (serieBuscada == null) {
             System.out.println("No se encontro la serie");
             return;
         }
-        Temporada temporada = serieBuscada.buscarTemporada(3);
+        Temporada temporada = serieBuscada.buscarTemporada(5);
 
-        Episodio episodio = temporada.buscarEpisodio(1);
+        Episodio episodio = temporada.buscarEpisodio(35);
 
         episodio.reproducir();
-
-
 
     }
 }
