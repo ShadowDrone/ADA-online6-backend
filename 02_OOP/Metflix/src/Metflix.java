@@ -5,9 +5,9 @@ public class Metflix {
 
     public List<Pelicula> peliculas = new ArrayList<>();
     public List<Serie> series = new ArrayList<>();
-    
+
     //Metodo que inicializa el catalogo cno las pelis/series qeu querramos
-    public void inicializarCatalogo(){
+    public void inicializarCatalogo() {
 
         //Pelis: Titanic, Batman: El caballero de la noche 
         Pelicula titanic; //declara una variable que apuntara a una Pelicula
@@ -43,7 +43,7 @@ public class Metflix {
         this.peliculas.add(batman);
 
         Pelicula elResplandor = new Pelicula();
-        elResplandor.nombre ="El Resplandor";
+        elResplandor.nombre = "El Resplandor";
         elResplandor.director = new Director();
         elResplandor.director.nombre = "Stanley Kubrick";
 
@@ -52,7 +52,7 @@ public class Metflix {
         Serie howIMetYM = new Serie();
         howIMetYM.nombre = "How I met your mother";
         howIMetYM.añoLanzamiento = 2005;
-        
+
         actor = new Actor();
         actor.nombre = "Neil Patrick Harris";
 
@@ -62,29 +62,32 @@ public class Metflix {
         actor.nombre = "Cobie Smulders";
 
         howIMetYM.actores.add(actor);
-        
+
         //T5:E11
         //creo la temporada
         Temporada temporada = new Temporada();
         temporada.numero = 5;
-     
+
         //Creo el episodio
         Episodio episodio = new Episodio();
-        episodio.nombre = "The last cigarrette";
-        episodio.numero = 11;
+        episodio.setNombre("The last cigarrette");
+        episodio.setNumero(11);
+        episodio.setDuracion(43);
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
         episodio = new Episodio();
-        episodio.nombre = "Definitions";
-        episodio.numero = 1;
+        episodio.setNombre("Definitions");
+        episodio.setNumero(1);
+        episodio.setDuracion(41);
 
         temporada.episodios.add(episodio);
 
         Websodio ws = new Websodio();
-        ws.nombre = "Nombre wesodio en internet";
-        ws.numero = 35;
+        ws.setNombre("Nombre wesodio en internet");
+        ws.setNumero(35);
+        ws.setDuracion(42);
         ws.link = "http://miepisodios.com/websodio.avi";
 
         temporada.episodios.add(ws);
@@ -92,23 +95,24 @@ public class Metflix {
         //Agrego la temporada
         howIMetYM.temporadas.add(temporada);
 
-
         //T3
         //creo la temporada
         temporada = new Temporada();
         temporada.numero = 3;
-     
+
         //Creo el episodio
         episodio = new Episodio();
-        episodio.nombre = "Wait for it";
-        episodio.numero = 1;
+        episodio.setNombre("Wait for it");
+        episodio.setNumero(1);
+        episodio.setDuracion(40);
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
         episodio = new Episodio();
-        episodio.nombre = "Little Boys";
-        episodio.numero = 4;
+        episodio.setNombre("Little Boys");
+        episodio.setNumero(4);
+        episodio.setDuracion(44);
 
         temporada.episodios.add(episodio);
 
@@ -121,27 +125,29 @@ public class Metflix {
         Serie bbt = new Serie();
         bbt.nombre = "The BigBang Theory";
         bbt.añoLanzamiento = 2007;
-        
+
         actor = new Actor();
         actor.nombre = "Kaley Cuoco";
 
         bbt.actores.add(actor);
 
-        
         //creo la temporada
         temporada = new Temporada();
         temporada.numero = 1;
-     
+
         //Creo el episodio
         episodio = new Episodio();
-        episodio.nombre = "Pilot";
-        episodio.numero = 1;
+        episodio.setNombre("Pilot");
+        episodio.setNumero(1);
+        episodio.setDuracion(41);
 
         //vinculo temporada con episodio
         temporada.episodios.add(episodio);
 
         episodio = new Episodio();
-        episodio.nombre = "The Cooper-Hofstadter Polarizatio";
+        episodio.setNombre("The Cooper-Hofstadter Polarization");
+        episodio.setNumero(13);
+        episodio.setDuracion(43);
 
         temporada.episodios.add(episodio);
 
@@ -151,9 +157,9 @@ public class Metflix {
         this.series.add(bbt);
 
     }
-    
+
     //Buscar Serie
-    public Serie buscarSerie(String nombreABuscar){
+    public Serie buscarSerie(String nombreABuscar) {
 
         // series = | serie1 | serie2 | serie25 | serie40 |
         //vamos a usar el foreach: que sirve para recorrer listas
@@ -172,7 +178,7 @@ public class Metflix {
 
     }
 
-    public Serie buscarSerieV2(String nombreABuscar){
+    public Serie buscarSerieV2(String nombreABuscar) {
         Serie serieBuscada = null;
         //En este caso se recorre TODO(aunque haya 1000 series)
         //y al final se devuelve si encontr una serie.
@@ -180,7 +186,7 @@ public class Metflix {
         //ej si hay 1000 series pero esta en la posicion 3, hace 3 vueltas
         for (Serie serie : this.series) {
             if (serie.nombre.equals(nombreABuscar))
-                serieBuscada = serie; 
+                serieBuscada = serie;
         }
         return serieBuscada;
         /*if (serieBuscada == null)

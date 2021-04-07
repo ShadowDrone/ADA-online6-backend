@@ -8,7 +8,7 @@ public class Temporada {
 
     public Episodio buscarEpisodio(int numeroEpisodio){
         for(Episodio episodio : this.episodios){
-            if (episodio.numero == numeroEpisodio)
+            if (episodio.getNumero() == numeroEpisodio)
                 return episodio;
         }
         return null;
