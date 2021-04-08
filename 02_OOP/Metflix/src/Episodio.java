@@ -1,9 +1,21 @@
 public class Episodio {
+
+    //Constructor
+    public Episodio(int numero, String nombre) {
+        this.numero = numero;
+        this.nombre = nombre;
+    }
+
+    public Episodio(int numero, String nombre, int duracion) {
+        this(numero, nombre); //llamando al coonstructor de 2 parametros
+        this.duracion = duracion;
+    }
+
     private int numero;
     private String nombre;
     private int duracion; //en minutos
-    public Director director;
-    public String sinopsis;
+    private Director director;
+    private String sinopsis;
 
     //GETTERS/SETTERS
     //GETTER => permite leer un valor de atributo

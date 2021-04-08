@@ -1,5 +1,11 @@
 
 public class Websodio extends Episodio {
+
+    public Websodio(int numero, String nombre, String link) {
+        super(numero, nombre);//llamo al constructor del mapadre
+        this.setLink(link);//seteo el link
+    }
+
     private String link;
 
     public String getLink() {

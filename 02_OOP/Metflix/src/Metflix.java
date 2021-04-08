@@ -69,26 +69,24 @@ public class Metflix {
         temporada.setNumero(5);
 
         //Creo el episodio
-        Episodio episodio = new Episodio();
-        episodio.setNombre("The last cigarrette");
-        episodio.setNumero(11);
+        Episodio episodio = new Episodio(11, "The last cigarrette");
         episodio.setDuracion(43);
 
         //vinculo temporada con episodio
         temporada.getEpisodios().add(episodio);
 
-        episodio = new Episodio();
-        episodio.setNombre("Definitions");
-        episodio.setNumero(1);
-        episodio.setDuracion(41);
+        episodio = new Episodio(1, "Definitions", 41);
+        //episodio.setNombre("Definitions");
+        //episodio.setNumero(1);
+        //episodio.setDuracion(41);
 
         temporada.getEpisodios().add(episodio);
 
-        Websodio ws = new Websodio();
-        ws.setNombre("Nombre wesodio en internet");
-        ws.setNumero(35);
+        Websodio ws = new Websodio(35, "Nombre wesodio en internet", "http://miepisodios.com/websodio.avi");
+        //ws.setNombre("Nombre wesodio en internet");
+        //ws.setNumero(35);
         ws.setDuracion(42);
-        ws.setLink("http://miepisodios.com/websodio.avi");
+        //ws.setLink("http://miepisodios.com/websodio.avi");
 
         temporada.getEpisodios().add(ws);
 
@@ -101,17 +99,17 @@ public class Metflix {
         temporada.setNumero(3);
 
         //Creo el episodio
-        episodio = new Episodio();
-        episodio.setNombre("Wait for it");
-        episodio.setNumero(1);
-        episodio.setDuracion(40);
+        episodio = new Episodio(1, "Wait for it", 40);
+        // episodio.setNombre("Wait for it");
+        // episodio.setNumero(1);
+        // episodio.setDuracion(40);
 
         //vinculo temporada con episodio
         temporada.getEpisodios().add(episodio);
 
-        episodio = new Episodio();
-        episodio.setNombre("Little Boys");
-        episodio.setNumero(4);
+        episodio = new Episodio(4, "Little Boys");
+        //episodio.setNombre("Little Boys");
+        //episodio.setNumero(4);
         episodio.setDuracion(44);
 
         temporada.getEpisodios().add(episodio);
@@ -136,18 +134,18 @@ public class Metflix {
         temporada.setNumero(1);
 
         //Creo el episodio
-        episodio = new Episodio();
-        episodio.setNombre("Pilot");
-        episodio.setNumero(1);
-        episodio.setDuracion(41);
+        episodio = new Episodio(1, "Pilot", 41);
+        //episodio.setNombre("Pilot");
+        //episodio.setNumero(1);
+        //episodio.setDuracion(41);
 
         //vinculo temporada con episodio
         temporada.getEpisodios().add(episodio);
 
-        episodio = new Episodio();
-        episodio.setNombre("The Cooper-Hofstadter Polarization");
-        episodio.setNumero(13);
-        episodio.setDuracion(43);
+        episodio = new Episodio(13, "The Cooper-Hofstadter Polarization");
+        //episodio.setNombre("The Cooper-Hofstadter Polarization");
+        //episodio.setNumero(13);
+        //episodio.setDuracion(43);
 
         temporada.getEpisodios().add(episodio);
 
