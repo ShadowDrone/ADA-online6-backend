@@ -13,60 +13,60 @@ public class Metflix {
         Pelicula titanic; //declara una variable que apuntara a una Pelicula
         titanic = new Pelicula(); //Estas ultimoas 2 lineas: Pelicula titanic = new Pelicula();
 
-        titanic.nombre = "Titanic";
-        titanic.añoLanzamiento = 1997;
-        titanic.duracion = 210; //3hs 30
+        titanic.setNombre("Titanic");
+        titanic.setAñoLanzamiento(1997);
+        titanic.setDuracion(210); //3hs 30
 
         Actor actor = new Actor();
-        actor.nombre = "Leo DiCaprio";
+        actor.setNombre("Leo DiCaprio");
 
         //Agrego a la lista de actores del objeto titanic
-        titanic.actores.add(actor); //metodo Add -> agregar a una lista
+        titanic.getActores().add(actor); //metodo Add -> agregar a una lista
 
         //Recien ahora estoy agregando a Titanic al catalogo
         this.peliculas.add(titanic);
 
         //Otra Peli
         Pelicula batman = new Pelicula();
-        batman.nombre = "Batman: el caballero de la nohe";
-        batman.añoLanzamiento = 2008;
-        batman.duracion = 152;
+        batman.setNombre("Batman: el caballero de la nohe");
+        batman.setAñoLanzamiento(2008);
+        batman.setDuracion(152);
 
         //No voy a declarar otra variable actor, voy a reusar
         //siempre primero antes de reusar
         // re instanciar
         actor = new Actor(); //Creo un nuevo actor, pero referenciado con la variable actor
-        actor.nombre = "Christian Bale";
+        actor.setNombre("Christian Bale");
 
-        batman.actores.add(actor);
+        batman.getActores().add(actor);
 
         this.peliculas.add(batman);
 
         Pelicula elResplandor = new Pelicula();
-        elResplandor.nombre = "El Resplandor";
-        elResplandor.director = new Director();
-        elResplandor.director.nombre = "Stanley Kubrick";
+        elResplandor.setNombre("El Resplandor");
+        elResplandor.setDirector(new Director());
+        elResplandor.getDirector().setNombre("Stanley Kubrick");
 
         //How I met your mother. Serie
 
         Serie howIMetYM = new Serie();
-        howIMetYM.nombre = "How I met your mother";
-        howIMetYM.añoLanzamiento = 2005;
+        howIMetYM.setNombre("How I met your mother");
+        howIMetYM.setAñoLanzamiento(2005);
 
         actor = new Actor();
-        actor.nombre = "Neil Patrick Harris";
+        actor.setNombre("Neil Patrick Harris");
 
-        howIMetYM.actores.add(actor);
+        howIMetYM.getActores().add(actor);
 
         actor = new Actor();
-        actor.nombre = "Cobie Smulders";
+        actor.setNombre("Cobie Smulders");
 
-        howIMetYM.actores.add(actor);
+        howIMetYM.getActores().add(actor);
 
         //T5:E11
         //creo la temporada
         Temporada temporada = new Temporada();
-        temporada.numero = 5;
+        temporada.setNumero(5);
 
         //Creo el episodio
         Episodio episodio = new Episodio();
@@ -75,30 +75,30 @@ public class Metflix {
         episodio.setDuracion(43);
 
         //vinculo temporada con episodio
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
 
         episodio = new Episodio();
         episodio.setNombre("Definitions");
         episodio.setNumero(1);
         episodio.setDuracion(41);
 
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
 
         Websodio ws = new Websodio();
         ws.setNombre("Nombre wesodio en internet");
         ws.setNumero(35);
         ws.setDuracion(42);
-        ws.link = "http://miepisodios.com/websodio.avi";
+        ws.setLink("http://miepisodios.com/websodio.avi");
 
-        temporada.episodios.add(ws);
+        temporada.getEpisodios().add(ws);
 
         //Agrego la temporada
-        howIMetYM.temporadas.add(temporada);
+        howIMetYM.getTemporadas().add(temporada);
 
         //T3
         //creo la temporada
         temporada = new Temporada();
-        temporada.numero = 3;
+        temporada.setNumero(3);
 
         //Creo el episodio
         episodio = new Episodio();
@@ -107,33 +107,33 @@ public class Metflix {
         episodio.setDuracion(40);
 
         //vinculo temporada con episodio
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
 
         episodio = new Episodio();
         episodio.setNombre("Little Boys");
         episodio.setNumero(4);
         episodio.setDuracion(44);
 
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
 
         //Agrego la temporada
-        howIMetYM.temporadas.add(temporada);
+        howIMetYM.getTemporadas().add(temporada);
 
         //Aca esta toda la serie con 2 temporadas y cada una con 2 episodios.
         this.series.add(howIMetYM);
 
         Serie bbt = new Serie();
-        bbt.nombre = "The BigBang Theory";
-        bbt.añoLanzamiento = 2007;
+        bbt.setNombre("The BigBang Theory");
+        bbt.setAñoLanzamiento(2007);
 
         actor = new Actor();
-        actor.nombre = "Kaley Cuoco";
+        actor.setNombre("Kaley Cuoco");
 
-        bbt.actores.add(actor);
+        bbt.getActores().add(actor);
 
         //creo la temporada
         temporada = new Temporada();
-        temporada.numero = 1;
+        temporada.setNumero(1);
 
         //Creo el episodio
         episodio = new Episodio();
@@ -142,17 +142,17 @@ public class Metflix {
         episodio.setDuracion(41);
 
         //vinculo temporada con episodio
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
 
         episodio = new Episodio();
         episodio.setNombre("The Cooper-Hofstadter Polarization");
         episodio.setNumero(13);
         episodio.setDuracion(43);
 
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
 
         //Agrego la temporada
-        bbt.temporadas.add(temporada);
+        bbt.getTemporadas().add(temporada);
 
         this.series.add(bbt);
 
@@ -170,7 +170,7 @@ public class Metflix {
         for (Serie serie : this.series) {
             //pregunto si el nombre de la serie actual
             //que estoy recorriendo es la que necesito
-            if (serie.nombre.equals(nombreABuscar))
+            if (serie.getNombre().equals(nombreABuscar))
                 return serie; //devuelvo esta serie.
         }
         //si llego hasta aca, es porque no encontro la serie.
@@ -185,7 +185,7 @@ public class Metflix {
         //en el caso anterior, se devuelve una vez encontrada.
         //ej si hay 1000 series pero esta en la posicion 3, hace 3 vueltas
         for (Serie serie : this.series) {
-            if (serie.nombre.equals(nombreABuscar))
+            if (serie.getNombre().equals(nombreABuscar))
                 serieBuscada = serie;
         }
         return serieBuscada;
