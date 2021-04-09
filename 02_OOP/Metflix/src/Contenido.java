@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Contenido {
+public abstract class Contenido {
     private String nombre;
     private Genero genero;
     //Idioma Origne
