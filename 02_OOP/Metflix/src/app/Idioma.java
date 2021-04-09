@@ -1,3 +1,5 @@
+package app;
+
 public class Idioma {
     private String nombre;
     private String alfabeto;

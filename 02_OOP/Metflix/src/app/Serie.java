@@ -1,3 +1,5 @@
+package app;
+
 import java.util.*;
 
 public class Serie extends Contenido {

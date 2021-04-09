@@ -1,3 +1,5 @@
+package app;
+
 import java.util.*;
 
 public class App {
@@ -15,6 +17,9 @@ public class App {
 
         miMetflix.inicializarCatalogo();//Estoy llamando al metodo que crea las pelis y series.
 
+        miMetflix.mostrarNominaciones();
+
+        
         Serie serieBuscada = miMetflix.buscarSerie("How I met your mother");
 
         if (serieBuscada == null) {

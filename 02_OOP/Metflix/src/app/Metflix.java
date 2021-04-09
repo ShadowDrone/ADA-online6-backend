@@ -1,11 +1,14 @@
+package app;
+
 import java.util.ArrayList;
 import java.util.List;
-import personas.*;
+import app.personas.*;
 
 public class Metflix {
 
     public List<Pelicula> peliculas = new ArrayList<>();
     public List<Serie> series = new ArrayList<>();
+    public List<INominable> nominados = new ArrayList<>();
 
     //Metodo que inicializa el catalogo cno las pelis/series qeu querramos
     public void inicializarCatalogo() {
@@ -43,11 +46,15 @@ public class Metflix {
 
         this.peliculas.add(batman);
 
+        this.nominados.add(batman);
+        this.nominados.add(actor);
+
         Pelicula elResplandor = new Pelicula();
         elResplandor.setNombre("El Resplandor");
         elResplandor.setDirector(new Director());
         elResplandor.getDirector().setNombre("Stanley Kubrick");
 
+        this.nominados.add(elResplandor);
         //How I met your mother. Serie
 
         Serie howIMetYM = new Serie();
@@ -195,6 +202,19 @@ public class Metflix {
 
     }
 
-    //buscar un director
-    //
+    public void mostrarNominaciones(){
+        //voy a imprimir el trailer de nominados.
+        int totalPelis = 0;
+        int totalActores = 0;
+        for (INominable nominado : this.nominados) {
+            nominado.reproducirTrailerNominacion();
+
+            if (nominado instanceof Pelicula)
+                totalPelis++;
+            if (nominado instanceof Actor)
+                totalActores++;
+        }
+        System.out.println("Peliculas nominadas: "+ totalPelis);
+        System.out.println("Actores nominados: " + totalActores);
+    }
 }

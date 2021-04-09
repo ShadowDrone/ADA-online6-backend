@@ -1,4 +1,6 @@
-import personas.Director;
+package app;
+
+import app.personas.Director;
 
 public class Episodio {
 
