@@ -1,3 +1,4 @@
+import personas.*;
 public class Pelicula extends Contenido {
     private int duracion; //en minutos
     private Director director = new Director();

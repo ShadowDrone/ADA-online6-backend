@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import personas.*; //En este caso importa todas las clases de personas.
 
 public abstract class Contenido {
     private String nombre;

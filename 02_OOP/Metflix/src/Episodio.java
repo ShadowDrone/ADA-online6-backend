@@ -1,3 +1,5 @@
+import personas.Director;
+
 public class Episodio {
 
     //Constructor

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import personas.*;
 
 public class Metflix {
 
