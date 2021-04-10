@@ -217,4 +217,16 @@ public class Metflix {
         System.out.println("Peliculas nominadas: "+ totalPelis);
         System.out.println("Actores nominados: " + totalActores);
     }
+
+    public void reproducirEpisodioDeSerie(String nombreSerie, int nroTemporada, int nroEpisodio){
+
+        Serie serie = this.buscarSerie(nombreSerie);
+
+        Temporada temporada = serie.buscarTemporada(nroTemporada);
+
+        Episodio episodio = temporada.buscarEpisodio(nroEpisodio);
+
+        episodio.reproducir();
+
+    }
 }
