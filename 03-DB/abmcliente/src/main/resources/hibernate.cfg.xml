@@ -7,7 +7,7 @@
     <!-- Database connection settings -->
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
-    <property name="connection.url">jdbc:mysql://2.tcp.ngrok.io:13080/creditos6ta?serverTimezone=UTC</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/creditos?serverTimezone=UTC</property>
     <property name="connection.username">adadb</property>
     <!-- Contraseña publica para demo -->
     <property name="connection.password">Contrasenia1!</property>
